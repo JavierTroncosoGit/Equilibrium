@@ -6,7 +6,7 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/config";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { resolveHref } from "@/lib/whatsapp";
@@ -39,7 +39,7 @@ export function Navbar() {
           : "bg-transparent py-5"
         }`}
     >
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between max-w-7xl">
+      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between max-w-[1150px]">
         {/* Logo */}
         <Link href="/" className="relative z-10 flex items-center">
           <Image
@@ -71,9 +71,10 @@ export function Navbar() {
                 {...(resolved.isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 className={cn(
                   buttonVariants(),
-                  "rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-primary hover:bg-primaryDark text-white"
+                  "rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-primary hover:bg-primaryDark text-white flex items-center gap-2 px-6"
                 )}
               >
+                <Phone className="w-4 h-4" />
                 {cta.text}
               </Link>
             );
@@ -122,9 +123,10 @@ export function Navbar() {
                       onClick={() => setMobileMenuOpen(false)}
                       className={cn(
                         buttonVariants(),
-                        "w-full rounded-full shadow-md bg-primary hover:bg-primaryDark text-white"
+                        "w-full rounded-full shadow-md bg-primary hover:bg-primaryDark text-white flex items-center justify-center gap-2"
                       )}
                     >
+                      <Phone className="w-4 h-4" />
                       {cta.text}
                     </Link>
                   </div>

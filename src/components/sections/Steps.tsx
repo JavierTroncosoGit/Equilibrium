@@ -11,9 +11,9 @@ export function Steps() {
   const items = config.steps || [];
 
   return (
-    <section id={config.id} className="py-12 lg:py-24 bg-white">
-      <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+    <section id={config.id} className="py-12 lg:py-16 bg-white">
+      <div className="container mx-auto px-4 md:px-6 max-w-[1150px]">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           {config.sectionLabel && (
             <motion.span 
               initial={{ opacity: 0, y: 10 }}
@@ -36,7 +36,7 @@ export function Steps() {
 
         <div className="relative max-w-4xl mx-auto">
           {/* Connector Line (visible on md+) */}
-          <div className="hidden md:block absolute top-[4rem] left-8 right-8 h-1 bg-gray-100 rounded-full">
+          <div className="hidden md:block absolute top-[2.5rem] left-8 right-8 h-1 bg-gray-100 rounded-full">
             <motion.div 
               initial={{ width: "0%" }}
               whileInView={{ width: "100%" }}

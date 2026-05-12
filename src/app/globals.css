@@ -10,8 +10,8 @@
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-heading);
-  --text-hero: clamp(2.25rem, 5vw, 4.5rem);
-  --text-display: clamp(1.875rem, 3.5vw, 3rem);
+  --text-hero: clamp(2rem, 4vw, 3.5rem);
+  --text-display: clamp(1.5rem, 3vw, 2.5rem);
   --text-xl: clamp(1.125rem, 1.5vw, 1.5rem);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);

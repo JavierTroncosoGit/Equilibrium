@@ -13,7 +13,7 @@ export function IframeReserva() {
   return (
     <section 
       id={config.id} 
-      className="py-20 lg:py-32 bg-white relative overflow-hidden scroll-mt-20"
+      className="py-12 lg:py-16 bg-white relative overflow-hidden scroll-mt-20"
     >
       {/* Decorative Background */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden -z-10">
@@ -21,7 +21,7 @@ export function IframeReserva() {
         <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-accent/5 rounded-full blur-[120px]" />
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 max-w-6xl relative z-10">
+      <div className="container mx-auto px-4 md:px-6 max-w-[1150px] relative z-10">
         <div className="grid lg:grid-cols-[1fr_2fr] gap-12 items-start">
           
           {/* Left Side: Info and Trust */}
@@ -42,7 +42,7 @@ export function IframeReserva() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-4xl md:text-5xl font-bold text-textPrimary leading-tight"
+                className="text-display font-bold text-textPrimary leading-tight"
               >
                 {config.headline || "Reserva tu hora ahora"}
               </motion.h2>

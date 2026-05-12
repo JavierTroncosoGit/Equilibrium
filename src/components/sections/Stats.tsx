@@ -50,7 +50,7 @@ export function Stats() {
                 <div className="h-12 w-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300">
                   {Icon ? <Icon className="w-6 h-6" /> : null}
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold text-textPrimary mb-2">{item.value}</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-textPrimary mb-2">{item.value}</h3>
                 <p className="text-textSecondary font-medium">{item.label}</p>
               </motion.div>
             );

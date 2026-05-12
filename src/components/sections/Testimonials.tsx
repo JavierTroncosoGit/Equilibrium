@@ -2,7 +2,7 @@
 
 import { siteConfig } from "@/lib/config";
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { Star, User } from "lucide-react";
 import Image from "next/image";
 
 export function Testimonials() {
@@ -13,9 +13,9 @@ export function Testimonials() {
   const items = config.items || [];
 
   return (
-    <section id={config.id} className="py-12 lg:py-24 bg-white overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+    <section id={config.id} className="py-12 lg:py-16 bg-white overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6 max-w-[1150px]">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           {config.sectionLabel && (
             <motion.span 
               initial={{ opacity: 0, y: 10 }}
@@ -65,8 +65,8 @@ export function Testimonials() {
               </p>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200 relative">
-                  {item.avatar && (
+                <div className="w-12 h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center text-primary relative border border-primary/5">
+                  {item.avatar && !item.avatar.includes('avatar') ? (
                     <Image 
                       src={item.avatar} 
                       alt={item.author} 
@@ -74,6 +74,8 @@ export function Testimonials() {
                       className="object-cover"
                       unoptimized={item.avatar.startsWith("/")}
                     />
+                  ) : (
+                    <User className="w-6 h-6 opacity-60" />
                   )}
                 </div>
                 <div>

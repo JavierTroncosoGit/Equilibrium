@@ -29,6 +29,6 @@ export function resolveHref(href: string): {
   if (href === "#whatsapp") {
     return { url: getWhatsAppUrl(), isExternal: true };
   }
-  const isExternal = href.startsWith("http");
+  const isExternal = href.startsWith("http") || href.startsWith("tel:");
   return { url: href, isExternal };
 }

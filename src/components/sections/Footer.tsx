@@ -23,18 +23,18 @@ export function Footer() {
   const instagramUrl = "https://www.instagram.com/equilibriumchonchi/";
 
   return (
-    <footer id={config.id} className="relative bg-white pt-24 pb-12 overflow-hidden">
+    <footer id={config.id} className="relative bg-white pt-16 pb-12 overflow-hidden">
       {/* Decorative background element */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
       
-      <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
+      <div className="container mx-auto px-4 md:px-6 max-w-[1150px] relative z-10">
         
         {/* Instagram Creative Section */}
         <motion.div 
           initial={{ y: 40, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
-          className="relative mb-24 rounded-[2.5rem] bg-gradient-to-br from-[#025273] to-[#013a52] p-8 md:p-12 overflow-hidden shadow-2xl"
+          className="relative mb-12 rounded-[2.5rem] bg-gradient-to-br from-[#025273] to-[#013a52] p-8 md:p-10 overflow-hidden shadow-2xl"
         >
           {/* Abstract circles */}
           <div className="absolute top-[-10%] right-[-5%] w-64 h-64 bg-white/5 rounded-full blur-3xl" />
@@ -46,7 +46,7 @@ export function Footer() {
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                 <span>@equilibriumchonchi</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
                 Únete a nuestra comunidad <br />de bienestar en redes sociales
               </h2>
               <p className="text-blue-100/80 text-lg mb-8 max-w-xl">
@@ -82,7 +82,7 @@ export function Footer() {
         </motion.div>
 
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Column 1: Brand */}
           <div className="flex flex-col gap-6">
             <Link href="/" className="inline-block">

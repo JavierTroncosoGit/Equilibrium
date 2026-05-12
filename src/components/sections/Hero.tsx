@@ -18,13 +18,13 @@ export function Hero() {
   return (
     <section 
       id={config.id} 
-      className="relative min-h-[90vh] flex items-center pt-24 pb-16 overflow-hidden bg-bgSecondary"
+      className="relative min-h-[70vh] flex items-center pt-20 pb-10 overflow-hidden bg-bgSecondary"
     >
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
       <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary opacity-20 blur-[100px]"></div>
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10 max-w-7xl">
+      <div className="container mx-auto px-4 md:px-6 relative z-10 max-w-[1150px]">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           
           {/* Content */}
@@ -96,30 +96,32 @@ export function Hero() {
 
           {/* Media */}
           {config.media && config.media.type !== "none" && (
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }}
-              animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative mx-auto w-full max-w-[500px] lg:max-w-none aspect-[4/3] lg:aspect-[3/4] xl:aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl border border-white/20"
-            >
-              {config.media.type === "image" && (
-                <div className="absolute inset-0 bg-primary/10 mix-blend-multiply z-10 rounded-[2rem]"></div>
-              )}
-              {config.media.type === "image" ? (
-                <Image
-                  src={config.media.src || "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop"}
-                  alt={config.media.alt || "Hero Image"}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-700 hover:scale-105"
-                  priority
-                />
-              ) : (
-                <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400">
-                  Video Placeholder
-                </div>
-              )}
-            </motion.div>
+            <div className="md:w-[85%] lg:w-[85%] mx-auto w-full">
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }}
+                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="relative mx-auto w-full max-w-[500px] lg:max-w-none aspect-[4/3] lg:aspect-[3/4] xl:aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl border border-white/20"
+              >
+                {config.media.type === "image" && (
+                  <div className="absolute inset-0 bg-primary/10 mix-blend-multiply z-10 rounded-[2rem]"></div>
+                )}
+                {config.media.type === "image" ? (
+                  <Image
+                    src={config.media.src || "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop"}
+                    alt={config.media.alt || "Hero Image"}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-700 hover:scale-105"
+                    priority
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400">
+                    Video Placeholder
+                  </div>
+                )}
+              </motion.div>
+            </div>
           )}
 
         </div>
