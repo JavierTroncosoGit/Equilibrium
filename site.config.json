@@ -1,0 +1,256 @@
+{
+  "_meta": {
+    "version": "3.0.0",
+    "project": "equilibrium-chonchi",
+    "type": "landing"
+  },
+  "brand": {
+    "name": "Equilibrium Chonchi",
+    "logo": {
+      "src": "/assets/logo-equilibrium.png",
+      "alt": "Logo Equilibrium Chonchi",
+      "width": 160,
+      "height": 53
+    },
+    "favicon": "/favicon.ico"
+  },
+  "colors": {
+    "primary": "#025273",
+    "primaryDark": "#0b5074",
+    "accent": "#e20514",
+    "bgPrimary": "#ffffff",
+    "bgSecondary": "#f8fafc",
+    "textPrimary": "#1c1c1c",
+    "textSecondary": "#4b5563"
+  },
+  "fonts": {
+    "heading": "Plus Jakarta Sans, sans-serif",
+    "body": "Inter, sans-serif"
+  },
+  "seo": {
+    "title": "Equilibrium Chonchi | Centro de Salud Integral",
+    "description": "Centro de salud integral en Chonchi. Especialidades médicas, Fonasa y particular. Evita traslados y agenda online.",
+    "ogTitle": "Equilibrium Chonchi | Tu centro de salud integral",
+    "ogDescription": "Todas las especialidades en un solo lugar en Chonchi. Agenda hoy.",
+    "ogImage": "/images/og-image.jpg",
+    "canonicalUrl": "https://www.equilibriumchonchi.cl",
+    "locale": "es_CL"
+  },
+  "contact": {
+    "whatsapp": {
+      "number": "56967014233",
+      "message": "Hola, me gustaría agendar una hora en Equilibrium Chonchi.",
+      "label": "Agendar por WhatsApp"
+    },
+    "email": "contacto@equilibriumchonchi.cl"
+  },
+  "animations": {
+    "level": 2
+  },
+  "sections": [
+    {
+      "id": "navbar",
+      "type": "navbar",
+      "links": [
+        {
+          "text": "Servicios",
+          "href": "#servicios"
+        },
+        {
+          "text": "Cómo Agendar",
+          "href": "#proceso"
+        },
+        {
+          "text": "Agenda Online",
+          "href": "#reserva"
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq"
+        }
+      ],
+      "cta": {
+        "text": "Agendar por WhatsApp",
+        "href": "#whatsapp"
+      }
+    },
+    {
+      "id": "hero",
+      "type": "hero",
+      "badge": "Atención Fonasa y Particular",
+      "headline": "Tu centro de salud integral en Chonchi",
+      "subheadline": "Todas las especialidades médicas, terapéuticas y diagnósticas en un solo lugar. Evita traslados largos y accede a atención humana de calidad.",
+      "ctas": [
+        {
+          "text": "Agendar por WhatsApp",
+          "href": "#whatsapp",
+          "variant": "primary"
+        },
+        {
+          "text": "Agenda Online Reservo",
+          "href": "#reserva",
+          "variant": "secondary"
+        }
+      ],
+      "media": {
+        "type": "image",
+        "src": "/images/hero.png",
+        "alt": "Centro de Salud Equilibrium"
+      }
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "items": [
+        {
+          "value": "15+",
+          "label": "Especialidades Médicas",
+          "icon": "heart-pulse"
+        },
+        {
+          "value": "Fonasa",
+          "label": "Atención Particular y Fonasa",
+          "icon": "users"
+        },
+        {
+          "value": "Chonchi",
+          "label": "Ubicación Central",
+          "icon": "map-pin"
+        }
+      ]
+    },
+    {
+      "id": "servicios",
+      "type": "benefits-grid",
+      "sectionLabel": "Nuestras Especialidades",
+      "headline": "Todo lo que necesitas, en un solo lugar",
+      "columns": 3,
+      "items": [
+        {
+          "icon": "stethoscope",
+          "title": "Medicina General",
+          "body": "Atención primaria para todas las edades."
+        },
+        {
+          "icon": "activity",
+          "title": "Kinesiología y Rehabilitación",
+          "body": "Recupera tu movilidad y bienestar."
+        },
+        {
+          "icon": "brain",
+          "title": "Psicología",
+          "body": "Apoyo para tu salud mental."
+        },
+        {
+          "icon": "ear",
+          "title": "Fonoaudiología",
+          "body": "Prevención y tratamiento de trastornos."
+        },
+        {
+          "icon": "apple",
+          "title": "Nutrición",
+          "body": "Planes alimentarios personalizados."
+        },
+        {
+          "icon": "test-tube",
+          "title": "Tecnología Médica",
+          "body": "Toma de muestras y exámenes."
+        }
+      ]
+    },
+    {
+      "id": "proceso",
+      "type": "steps",
+      "sectionLabel": "Cómo Agendar",
+      "headline": "Tu atención en simples pasos",
+      "style": "numbered",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Elige tu especialidad",
+          "body": "Revisa nuestros servicios disponibles."
+        },
+        {
+          "number": "02",
+          "title": "Reserva tu hora",
+          "body": "A través de WhatsApp o agenda online Reservo."
+        },
+        {
+          "number": "03",
+          "title": "Asiste a tu cita",
+          "body": "Te esperamos en Sargento Candelaria 346, Chonchi."
+        }
+      ]
+    },
+    {
+      "id": "reserva",
+      "type": "iframe-reserva",
+      "_note": "Sección custom para el iframe de Reservo, que debe ser el corazón de la web.",
+      "sectionLabel": "Agenda Online",
+      "headline": "Reserva tu hora rápidamente",
+      "iframeSrc": "https://agendamiento.reservo.cl/makereserva/agenda/i0Kaf99050hiEB1T0624wQP869h6w9",
+      "iframeHeight": 600
+    },
+    {
+      "id": "testimonios",
+      "type": "testimonials",
+      "sectionLabel": "Experiencias",
+      "headline": "Lo que dicen nuestros pacientes",
+      "style": "carousel",
+      "items": [
+        {
+          "quote": "Excelente atención, muy rápido y cómodo tener todo en Chonchi.",
+          "author": "Paciente Particular",
+          "role": "Usuario Reservo",
+          "avatar": "/images/avatar.jpg",
+          "rating": 5
+        },
+        {
+          "quote": "Atención humana y profesional. Los kinesiólogos son un siete.",
+          "author": "Paciente Fonasa",
+          "role": "Chonchi",
+          "avatar": "/images/avatar2.jpg",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "sectionLabel": "Preguntas Frecuentes",
+      "headline": "Resolvemos tus dudas",
+      "schema": true,
+      "items": [
+        {
+          "question": "¿Atienden con Fonasa?",
+          "answer": "Sí, atendemos pacientes Fonasa e institucional y también particulares."
+        },
+        {
+          "question": "¿Cómo reservo una hora?",
+          "answer": "Puedes agendar por WhatsApp, teléfono o a través de nuestra agenda online en Reservo."
+        },
+        {
+          "question": "¿Qué especialidades tienen?",
+          "answer": "Medicina general, kinesiología, psicología, fonoaudiología, nutrición, podología, oftalmología, tecnología médica, masajes y más."
+        },
+        {
+          "question": "¿Necesito derivación para atenderme?",
+          "answer": "Depende de la especialidad. Para medicina general no necesitas derivación. Contáctanos y te orientamos."
+        },
+        {
+          "question": "¿Dónde están ubicados?",
+          "answer": "Sargento Candelaria 346, Chonchi, Chiloé."
+        }
+      ]
+    },
+    {
+      "id": "footer",
+      "type": "footer",
+      "tagline": "Equilibrium Chonchi - Tu salud en buenas manos.",
+      "links": [],
+      "social": {
+        "instagram": "https://www.instagram.com/equilibriumchonchi/"
+      }
+    }
+  ]
+}
