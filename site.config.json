@@ -171,7 +171,7 @@
           "image": "/images/team/medico-general.jpg"
         },
         {
-          "name": "Kgo. Elias Vergara Opazo",
+          "name": "Elias Vergara Opazo",
           "role": "Kinesiólogo",
           "category": "Kinesiología & Rehabilitación",
           "date": "18 May 2026",
@@ -180,8 +180,8 @@
           "image": "/images/team/kinesiologo.jpg"
         },
         {
-          "name": "Ps. Diego Urrutia Marchant",
-          "role": "Psicóloga",
+          "name": "Diego Urrutia Marchant",
+          "role": "Psicólogo",
           "category": "Salud Mental & Bienestar",
           "date": "15 May 2026",
           "quoteTitle": "Salud mental: el equilibrio invisible que sostiene nuestro día a día",
@@ -189,7 +189,7 @@
           "image": "/images/team/psicologa.jpg"
         },
         {
-          "name": "Flga. Daniela Cárdenas Díaz",
+          "name": "Daniela Cárdenas Díaz",
           "role": "Fonoaudióloga",
           "category": "Fonoaudiología & Audiología",
           "date": "10 May 2026",
@@ -198,7 +198,7 @@
           "image": "/images/team/fonoaudiologa.jpg"
         },
         {
-          "name": "T.M. Nicolas Quiroz Espinoza",
+          "name": "Nicolas Quiroz Espinoza",
           "role": "Tecnólogo Médico en Oftalmología",
           "category": "Salud Visual",
           "date": "05 May 2026",
@@ -285,24 +285,20 @@
       "schema": true,
       "items": [
         {
-          "question": "¿Atienden con Fonasa?",
-          "answer": "Sí, atendemos pacientes Fonasa e institucional y también particulares."
+          "question": "¿Cómo reservo una hora?",
+          "answer": "Disponemos de múltiples canales para facilitar tu reserva de horas médicas y de especialidades. La forma más rápida y directa es a través de nuestra plataforma de agendamiento online Reservo, disponible las 24 horas del día. Asimismo, puedes comunicarte con nuestro equipo de secretaría a través de WhatsApp o llamando por teléfono para recibir asistencia personalizada y encontrar el horario que mejor se adapte a tus necesidades."
         },
         {
-          "question": "¿Cómo reservo una hora?",
-          "answer": "Puedes agendar por WhatsApp, teléfono o a través de nuestra agenda online en Reservo."
+          "question": "¿Atienden con Fonasa?",
+          "answer": "Sí, en Centro Médico Equilibrium atendemos a pacientes beneficiarios de Fonasa (en todas sus modalidades) así como de convenios institucionales y pacientes particulares. Nuestro compromiso es facilitar el acceso a una salud de calidad para toda la comunidad de Chonchi y sus alrededores, garantizando aranceles justos y transparentes."
         },
         {
           "question": "¿Qué especialidades tienen?",
-          "answer": "Medicina general, kinesiología, psicología, fonoaudiología, nutrición, podología, oftalmología, tecnología médica, masajes y más."
+          "answer": "Contamos con una amplia cartera de especialidades orientadas al cuidado integral de tu salud y la de tu familia. Entre nuestros servicios principales se destacan medicina general, kinesiología, psicología clínica, fonoaudiología infantil y de adultos, nutrición y dietética, podología clínica, oftalmología, tecnología médica para exámenes visuales y masajes terapéuticos descontracturantes."
         },
         {
           "question": "¿Necesito derivación para atenderme?",
-          "answer": "Depende de la especialidad. Para medicina general no necesitas derivación. Contáctanos y te orientamos."
-        },
-        {
-          "question": "¿Dónde están ubicados?",
-          "answer": "Sargento Candelaria 346, Chonchi, Chiloé."
+          "answer": "No es estrictamente necesaria una orden médica o derivación previa para agendar tu cita con la gran mayoría de nuestros especialistas o profesionales, como medicina general, psicología o nutrición. Sin embargo, para ciertos tratamientos de kinesiología o fonoaudiología, contar con una orden médica te permitirá gestionar correctamente reembolsos o coberturas con tu previsión de salud. Si tienes dudas, contáctanos directamente para guiarte."
         }
       ]
     },
