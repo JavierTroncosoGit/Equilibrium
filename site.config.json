@@ -57,8 +57,8 @@
           "href": "#servicios"
         },
         {
-          "text": "Cómo Agendar",
-          "href": "#proceso"
+          "text": "Equipo",
+          "href": "#equipo"
         },
         {
           "text": "Agenda Online",
@@ -70,8 +70,8 @@
         }
       ],
       "cta": {
-        "text": "Llamar ahora",
-        "href": "tel:+56967014233"
+        "text": "Agendar Hora",
+        "href": "#reserva"
       }
     },
     {
@@ -79,7 +79,7 @@
       "type": "hero",
       "badge": "Atención Fonasa y Particular",
       "headline": "Tu centro de salud integral en Chonchi",
-      "subheadline": "Todas las especialidades médicas, terapéuticas y diagnósticas en un solo lugar. Evita traslados largos y accede a atención humana de calidad.",
+      "subheadline": "Todas tus especialidades en un mismo lugar, con la atención humana y cercana que realmente mereces.",
       "ctas": [
         {
           "text": "Agendar por WhatsApp",
@@ -99,97 +99,153 @@
       }
     },
     {
-      "id": "stats",
-      "type": "stats",
-      "items": [
-        {
-          "value": "15+",
-          "label": "Especialidades Médicas",
-          "icon": "heart-pulse"
-        },
-        {
-          "value": "Fonasa",
-          "label": "Atención Particular y Fonasa",
-          "icon": "users"
-        },
-        {
-          "value": "Chonchi",
-          "label": "Ubicación Central",
-          "icon": "map-pin"
-        }
-      ]
-    },
-    {
       "id": "servicios",
-      "type": "benefits-grid",
+      "type": "services-banner",
       "sectionLabel": "Nuestras Especialidades",
       "headline": "Todo lo que necesitas, en un solo lugar",
-      "columns": 3,
       "items": [
         {
           "icon": "stethoscope",
-          "title": "Medicina General",
-          "body": "Atención primaria para todas las edades."
+          "title": "Medicina General"
         },
         {
           "icon": "activity",
-          "title": "Kinesiología y Rehabilitación",
-          "body": "Recupera tu movilidad y bienestar."
+          "title": "Kinesiología"
         },
         {
           "icon": "brain",
-          "title": "Psicología",
-          "body": "Apoyo para tu salud mental."
+          "title": "Psicología"
         },
         {
           "icon": "ear",
-          "title": "Fonoaudiología",
-          "body": "Prevención y tratamiento de trastornos."
+          "title": "Fonoaudiología"
         },
         {
           "icon": "apple",
-          "title": "Nutrición",
-          "body": "Planes alimentarios personalizados."
+          "title": "Nutrición"
+        },
+        {
+          "icon": "footprints",
+          "title": "Podología"
+        },
+        {
+          "icon": "eye",
+          "title": "Oftalmología"
+        },
+        {
+          "icon": "hand",
+          "title": "Masajes Descontracturantes"
+        },
+        {
+          "icon": "heart-pulse",
+          "title": "Electrocardiogramas"
         },
         {
           "icon": "test-tube",
-          "title": "Tecnología Médica",
-          "body": "Toma de muestras y exámenes."
+          "title": "Toma de Muestras"
+        },
+        {
+          "icon": "monitor-smartphone",
+          "title": "Telemedicina"
+        },
+        {
+          "icon": "audio-lines",
+          "title": "Audiometrías"
         }
       ]
     },
     {
-      "id": "proceso",
-      "type": "steps",
-      "sectionLabel": "Cómo Agendar",
-      "headline": "Tu atención en simples pasos",
-      "style": "numbered",
+      "id": "equipo",
+      "type": "team",
+      "sectionLabel": "Nuestros Especialistas",
+      "headline": "Nuestros especialistas opinan",
+      "subheadline": "Un espacio donde nuestros especialistas comparten conocimiento y experiencia sobre salud, bienestar y prevención.",
+      "members": [
+        {
+          "name": "Dr. Alexis Salazar Russian",
+          "role": "Médico",
+          "category": "Salud Preventiva",
+          "date": "22 May 2026",
+          "quoteTitle": "La prevención activa: el pilar fundamental de una vida saludable",
+          "description": "La medicina general no se trata solo de tratar la enfermedad cuando aparece, sino de construir hábitos y controles preventivos que eviten su desarrollo. Escuchar al paciente de forma activa y empática es el primer paso para un diagnóstico correcto y un tratamiento eficaz que mejore su calidad de vida a largo plazo.",
+          "image": "/images/team/medico-general.jpg"
+        },
+        {
+          "name": "Kgo. Elias Vergara Opazo",
+          "role": "Kinesiólogo",
+          "category": "Kinesiología & Rehabilitación",
+          "date": "18 May 2026",
+          "quoteTitle": "El movimiento es vida: recuperar la movilidad sin dolor",
+          "description": "Cada paciente tiene una historia de movimiento única. La rehabilitación exitosa combina terapia manual avanzada, ejercicios personalizados y, sobre todo, la educación del paciente para prevenir futuras lesiones y devolverles la confianza en su propio cuerpo para retomar sus actividades diarias sin dolor.",
+          "image": "/images/team/kinesiologo.jpg"
+        },
+        {
+          "name": "Ps. Diego Urrutia Marchant",
+          "role": "Psicóloga",
+          "category": "Salud Mental & Bienestar",
+          "date": "15 May 2026",
+          "quoteTitle": "Salud mental: el equilibrio invisible que sostiene nuestro día a día",
+          "description": "El bienestar emocional es tan crucial como la salud física. Brindar un espacio seguro, confidencial y libre de juicios permite a cada persona comprender sus procesos, desarrollar resiliencia y encontrar herramientas prácticas para afrontar los desafíos de la vida y vivir con mayor plenitud.",
+          "image": "/images/team/psicologa.jpg"
+        },
+        {
+          "name": "Flga. Daniela Cárdenas Díaz",
+          "role": "Fonoaudióloga",
+          "category": "Fonoaudiología & Audiología",
+          "date": "10 May 2026",
+          "quoteTitle": "La comunicación y la audición son las llaves de la conexión humana",
+          "description": "El habla, el lenguaje y la audición son fundamentales para nuestra vida social y emocional. Trabajar en su diagnóstico y rehabilitación nos permite abrir puertas de comunicación y reconectar a niños, jóvenes y adultos con su entorno familiar y social de manera efectiva.",
+          "image": "/images/team/fonoaudiologa.jpg"
+        },
+        {
+          "name": "T.M. Nicolas Quiroz Espinoza",
+          "role": "Tecnólogo Médico en Oftalmología",
+          "category": "Salud Visual",
+          "date": "05 May 2026",
+          "quoteTitle": "Cuidar tus ojos hoy para ver un mejor mañana",
+          "description": "La visión es el sentido con el que más interactuamos con el mundo. Un examen visual completo a tiempo puede detectar no solo problemas refractivos como miopía o astigmatismo, sino también patologías silenciosas. La detección temprana es clave para proteger y salvar tu visión.",
+          "image": "/images/team/tecnologo-oftalmo.jpg"
+        }
+      ]
+    },
+    {
+      "id": "reserva",
+      "type": "reserva-unified",
+      "sectionLabel": "Agenda Online",
+      "headline": "Agenda tu hora en simples pasos",
       "steps": [
         {
           "number": "01",
           "title": "Elige tu especialidad",
-          "body": "Revisa nuestros servicios disponibles."
+          "body": "Revisa nuestros servicios y encuentra al profesional indicado."
         },
         {
           "number": "02",
           "title": "Reserva tu hora",
-          "body": "A través de WhatsApp o agenda online Reservo."
+          "body": "Selecciona fecha y horario directamente en nuestra agenda online."
         },
         {
           "number": "03",
           "title": "Asiste a tu cita",
           "body": "Te esperamos en Sargento Candelaria 346, Chonchi."
         }
-      ]
-    },
-    {
-      "id": "reserva",
-      "type": "iframe-reserva",
-      "_note": "Sección custom para el iframe de Reservo, que debe ser el corazón de la web.",
-      "sectionLabel": "Agenda Online",
-      "headline": "Reserva tu hora rápidamente",
+      ],
       "iframeSrc": "https://agendamiento.reservo.cl/makereserva/agenda/i0Kaf99050hiEB1T0624wQP869h6w9",
-      "iframeHeight": 600
+      "iframeHeight": 650,
+      "trustBadges": [
+        {
+          "icon": "clock",
+          "text": "Confirmación inmediata"
+        },
+        {
+          "icon": "shield-check",
+          "text": "Reserva 100% segura"
+        },
+        {
+          "icon": "check-circle-2",
+          "text": "Especialistas certificados"
+        }
+      ]
     },
     {
       "id": "testimonios",
@@ -210,6 +266,13 @@
           "author": "Paciente Fonasa",
           "role": "Chonchi",
           "avatar": "/images/avatar2.jpg",
+          "rating": 5
+        },
+        {
+          "quote": "Por fin un lugar donde puedo resolver todo sin viajar a Castro.",
+          "author": "Vecina de Chonchi",
+          "role": "Paciente Regular",
+          "avatar": "/images/avatar3.jpg",
           "rating": 5
         }
       ]

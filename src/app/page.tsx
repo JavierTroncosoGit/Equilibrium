@@ -1,13 +1,11 @@
 import { siteConfig } from "@/lib/config";
 import { Navbar } from "@/components/sections/Navbar";
 import { Hero } from "@/components/sections/Hero";
-import { Stats } from "@/components/sections/Stats";
-import { BenefitsGrid } from "@/components/sections/BenefitsGrid";
-import { Steps } from "@/components/sections/Steps";
-import { IframeReserva } from "@/components/sections/IframeReserva";
+import { ServicesBanner } from "@/components/sections/ServicesBanner";
+import { Team } from "@/components/sections/Team";
+import { ReservaSection } from "@/components/sections/ReservaSection";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
-
 import { Footer } from "@/components/sections/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 
@@ -21,19 +19,16 @@ export default function Home() {
         return <Navbar key={section.id} />;
       case "hero":
         return <Hero key={section.id} />;
-      case "stats":
-        return <Stats key={section.id} />;
-      case "benefits-grid":
-        return <BenefitsGrid key={section.id} />;
-      case "steps":
-        return <Steps key={section.id} />;
-      case "iframe-reserva":
-        return <IframeReserva key={section.id} />;
+      case "services-banner":
+        return <ServicesBanner key={section.id} />;
+      case "team":
+        return <Team key={section.id} />;
+      case "reserva-unified":
+        return <ReservaSection key={section.id} />;
       case "testimonials":
         return <Testimonials key={section.id} />;
       case "faq":
         return <FAQ key={section.id} />;
-
       case "footer":
         return <Footer key={section.id} />;
       default:

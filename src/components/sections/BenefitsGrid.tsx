@@ -33,7 +33,7 @@ export function BenefitsGrid() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-primary font-bold uppercase tracking-wider text-sm mb-4 block"
+              className="text-accent font-bold uppercase tracking-wider text-sm mb-4 block"
             >
               {config.sectionLabel}
             </motion.span>

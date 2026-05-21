@@ -13,7 +13,9 @@ export function Testimonials() {
   const items = config.items || [];
 
   return (
-    <section id={config.id} className="py-12 lg:py-16 bg-white overflow-hidden">
+    <section id={config.id} className="py-12 lg:py-16 bg-white overflow-hidden relative">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-[size:20px_20px] opacity-50 pointer-events-none" />
       <div className="container mx-auto px-4 md:px-6 max-w-[1150px]">
         <div className="text-center max-w-3xl mx-auto mb-10">
           {config.sectionLabel && (
@@ -21,7 +23,7 @@ export function Testimonials() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-primary font-bold uppercase tracking-wider text-sm mb-4 block"
+              className="text-accent font-bold uppercase tracking-wider text-sm mb-4 block"
             >
               {config.sectionLabel}
             </motion.span>
@@ -66,17 +68,37 @@ export function Testimonials() {
 
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center text-primary relative border border-primary/5">
-                  {item.avatar && !item.avatar.includes('avatar') ? (
-                    <Image 
-                      src={item.avatar} 
-                      alt={item.author} 
-                      fill 
-                      className="object-cover"
-                      unoptimized={item.avatar.startsWith("/")}
-                    />
-                  ) : (
-                    <User className="w-6 h-6 opacity-60" />
-                  )}
+                  {(() => {
+                    const hasRealImage = item.avatar && !item.avatar.includes('avatar');
+                    if (hasRealImage) {
+                      return (
+                        <Image 
+                          src={item.avatar} 
+                          alt={item.author} 
+                          fill 
+                          className="object-cover"
+                          unoptimized={item.avatar.startsWith("/")}
+                        />
+                      );
+                    }
+                    // Generate initials
+                    const parts = (item.author || "").trim().split(/\s+/);
+                    const initials = parts.length >= 2 ? (parts[0][0] + parts[1][0]).toUpperCase() : parts[0]?.[0]?.toUpperCase() || "?";
+                    // Generate color from name
+                    let hash = 0;
+                    for (let i = 0; i < (item.author || "").length; i++) {
+                      hash = (item.author || "").charCodeAt(i) + ((hash << 5) - hash);
+                    }
+                    const hue = Math.abs(hash % 360);
+                    return (
+                      <div
+                        className="w-full h-full flex items-center justify-center text-white font-bold text-lg"
+                        style={{ backgroundColor: `hsl(${hue}, 45%, 55%)` }}
+                      >
+                        {initials}
+                      </div>
+                    );
+                  })()}
                 </div>
                 <div>
                   <h4 className="font-bold text-textPrimary">{item.author}</h4>

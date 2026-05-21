@@ -6,7 +6,7 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/config";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
-import { Menu, Phone } from "lucide-react";
+import { Menu, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { resolveHref } from "@/lib/whatsapp";
@@ -74,7 +74,7 @@ export function Navbar() {
                   "rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-primary hover:bg-primaryDark text-white flex items-center gap-2 px-6"
                 )}
               >
-                <Phone className="w-4 h-4" />
+                <Calendar className="w-4 h-4" />
                 {cta.text}
               </Link>
             );
@@ -126,7 +126,7 @@ export function Navbar() {
                         "w-full rounded-full shadow-md bg-primary hover:bg-primaryDark text-white flex items-center justify-center gap-2"
                       )}
                     >
-                      <Phone className="w-4 h-4" />
+                      <Calendar className="w-4 h-4" />
                       {cta.text}
                     </Link>
                   </div>

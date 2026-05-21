@@ -10,22 +10,78 @@ import {
   MapPin, 
   Phone, 
   ArrowRight,
-  ExternalLink
+  ExternalLink,
+  Heart,
+  Activity,
+  Award
 } from "lucide-react";
 import { resolveHref } from "@/lib/whatsapp";
+
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      strokeLinecap="round" 
+      strokeLinejoin="round" 
+      className={className}
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+    </svg>
+  );
+}
+
+function FacebookIcon({ className }: { className?: string }) {
+  return (
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      strokeLinecap="round" 
+      strokeLinejoin="round" 
+      className={className}
+    >
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+    </svg>
+  );
+}
 
 export function Footer() {
   const footerConfig = siteConfig.sections.find((s) => s.type === "footer");
   if (!footerConfig) return null;
 
   const config = footerConfig as any;
-  const navLinks = siteConfig.sections.find(s => s.type === "navbar")?.links || [];
+  const navLinksRaw = siteConfig.sections.find(s => s.type === "navbar")?.links || [];
+  const navLinks = [...navLinksRaw as any[]];
   const instagramUrl = "https://www.instagram.com/equilibriumchonchi/";
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  } as const;
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  } as const;
+
   return (
-    <footer id={config.id} className="relative bg-white pt-16 pb-12 overflow-hidden">
-      {/* Decorative background element */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+    <footer id={config.id} className="relative bg-gradient-to-b from-white to-slate-50/90 pt-20 pb-12 overflow-hidden border-t border-gray-100/50">
+      {/* Decorative floating blurred lights */}
+      <div className="absolute top-[20%] left-[-10%] w-[400px] h-[400px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[350px] h-[350px] rounded-full bg-accent/5 blur-[100px] pointer-events-none" />
       
       <div className="container mx-auto px-4 md:px-6 max-w-[1150px] relative z-10">
         
@@ -34,58 +90,81 @@ export function Footer() {
           initial={{ y: 40, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
-          className="relative mb-12 rounded-[2.5rem] bg-gradient-to-br from-[#025273] to-[#013a52] p-8 md:p-10 overflow-hidden shadow-2xl"
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="relative mb-16 rounded-[2.5rem] bg-gradient-to-br from-primary via-[#046187] to-primaryDark p-8 md:p-12 overflow-hidden shadow-xl shadow-primary/10 border border-white/20 bg-clip-padding"
         >
-          {/* Abstract circles */}
-          <div className="absolute top-[-10%] right-[-5%] w-64 h-64 bg-white/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-[-20%] left-[-5%] w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+          {/* Internal gradient glows */}
+          <div className="absolute top-[-20%] right-[-10%] w-80 h-80 bg-white/[0.04] rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-[-30%] left-[-10%] w-96 h-96 bg-accent/20 rounded-full blur-3xl pointer-events-none" />
           
-          <div className="relative flex flex-col lg:flex-row items-center gap-10">
+          <div className="relative flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/90 text-sm font-medium mb-6 backdrop-blur-md border border-white/10">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white text-xs font-bold uppercase tracking-wider mb-6 backdrop-blur-md border border-white/15">
+                <InstagramIcon className="w-3.5 h-3.5 text-accent animate-pulse" />
                 <span>@equilibriumchonchi</span>
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
-                Únete a nuestra comunidad <br />de bienestar en redes sociales
+              <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 leading-tight tracking-tight">
+                Únete a nuestra comunidad <br />de bienestar digital
               </h2>
-              <p className="text-blue-100/80 text-lg mb-8 max-w-xl">
-                Encuentra consejos de salud, conoce a nuestro equipo y mantente al tanto de nuevos convenios y especialidades.
+              <p className="text-blue-100/80 text-base md:text-lg mb-8 max-w-xl leading-relaxed">
+                Encuentra valiosos consejos de prevención, conoce las opiniones de nuestros especialistas y entérate de nuevas especialidades y convenios de salud.
               </p>
+              
               <Link 
                 href={instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-white text-primary px-8 py-4 rounded-2xl font-bold hover:bg-blue-50 transition-all hover:scale-105 shadow-xl group"
+                className="inline-flex items-center gap-3 bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-slate-50 transition-all hover:scale-[1.03] shadow-lg shadow-black/10 group"
               >
                 Seguir en Instagram
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
             
             {/* Mock Instagram Feed Teaser */}
-            <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 gap-4 w-full max-w-md lg:max-w-none">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className={i === 3 ? "hidden sm:block" : ""}>
-                  <div className="aspect-square rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center group overflow-hidden relative">
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white w-5 h-5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                    </div>
-                    <div className="w-12 h-12 rounded-full border-2 border-white/30 flex items-center justify-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white/40 w-6 h-6"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                    </div>
-                  </div>
-                </div>
-              ))}
+            <div className="flex-1 w-full max-w-md lg:max-w-none flex justify-center lg:justify-end">
+              <div className="grid grid-cols-3 gap-4 w-full max-w-sm">
+                {[
+                  { icon: Heart, label: "Consejos", gradient: "from-pink-500/20 to-rose-600/20" },
+                  { icon: Activity, label: "Prevención", gradient: "from-cyan-500/20 to-blue-600/20" },
+                  { icon: Award, label: "Salud", gradient: "from-emerald-500/20 to-teal-600/20" },
+                  { icon: MessageCircle, label: "Equipo", gradient: "from-purple-500/20 to-indigo-600/20" },
+                  { icon: Heart, label: "Bienestar", gradient: "from-orange-500/20 to-amber-600/20" },
+                  { icon: Activity, label: "Hábitos", gradient: "from-blue-500/20 to-indigo-600/20" }
+                ].map((post, i) => {
+                  const PostIcon = post.icon;
+                  return (
+                    <motion.div 
+                      key={i}
+                      whileHover={{ scale: 1.05, y: -4 }}
+                      className="aspect-square rounded-2xl bg-white/[0.06] backdrop-blur-md border border-white/10 flex flex-col items-center justify-center p-3 text-center cursor-pointer transition-all duration-300 relative group overflow-hidden"
+                    >
+                      <div className={`absolute inset-0 bg-gradient-to-br ${post.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
+                      <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mb-2 group-hover:bg-white group-hover:text-primary transition-all duration-300 z-10">
+                        <PostIcon className="text-white group-hover:text-primary w-5 h-5 transition-colors" />
+                      </div>
+                      <span className="text-[10px] font-bold text-white/60 tracking-wider uppercase group-hover:text-white transition-colors z-10">
+                        {post.label}
+                      </span>
+                    </motion.div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </motion.div>
 
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          {/* Column 1: Brand */}
-          <div className="flex flex-col gap-6">
-            <Link href="/" className="inline-block">
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16 pt-4"
+        >
+          {/* Column 1: Brand (4 cols) */}
+          <motion.div variants={itemVariants} className="lg:col-span-4 flex flex-col gap-6">
+            <Link href="/" className="inline-block self-start hover:opacity-90 transition-opacity">
               <Image
                 src="/assets/logo-equilibrium.png"
                 alt={siteConfig.brand.logo.alt}
@@ -94,105 +173,124 @@ export function Footer() {
                 className="h-12 w-auto"
               />
             </Link>
-            <p className="text-textSecondary leading-relaxed">
+            <p className="text-textSecondary leading-relaxed text-sm md:text-base pr-4">
               {config.tagline || "Centro de salud integral dedicado a brindar atención de calidad a la comunidad de Chonchi y sus alrededores."}
             </p>
-            <div className="flex items-center gap-4">
-              <Link href={instagramUrl} target="_blank" className="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            
+            {/* Social Network Buttons */}
+            <div className="flex items-center gap-3 mt-2">
+              <Link 
+                href={instagramUrl} 
+                target="_blank" 
+                aria-label="Instagram"
+                className="w-11 h-11 rounded-full bg-white border border-gray-150 flex items-center justify-center text-textSecondary hover:bg-[#e1306c] hover:text-white hover:border-[#e1306c] hover:shadow-lg hover:shadow-[#e1306c]/20 hover:-translate-y-1 transition-all duration-300"
+              >
+                <InstagramIcon className="w-5 h-5" />
               </Link>
-              <Link href="#" className="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              <Link 
+                href="#" 
+                aria-label="Facebook"
+                className="w-11 h-11 rounded-full bg-white border border-gray-150 flex items-center justify-center text-textSecondary hover:bg-[#1877f2] hover:text-white hover:border-[#1877f2] hover:shadow-lg hover:shadow-[#1877f2]/20 hover:-translate-y-1 transition-all duration-300"
+              >
+                <FacebookIcon className="w-5 h-5" />
               </Link>
-              <Link href={resolveHref("#whatsapp").url} target="_blank" className="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all">
+              <Link 
+                href={resolveHref("#whatsapp").url} 
+                target="_blank" 
+                aria-label="WhatsApp"
+                className="w-11 h-11 rounded-full bg-white border border-gray-150 flex items-center justify-center text-textSecondary hover:bg-[#25d366] hover:text-white hover:border-[#25d366] hover:shadow-lg hover:shadow-[#25d366]/20 hover:-translate-y-1 transition-all duration-300"
+              >
                 <MessageCircle className="w-5 h-5" />
               </Link>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Column 2: Quick Links */}
-          <div>
-            <h4 className="text-primary font-bold mb-6 text-lg">Navegación</h4>
-            <ul className="flex flex-col gap-4">
+          {/* Column 2: Quick Links (2 cols) */}
+          <motion.div variants={itemVariants} className="lg:col-span-2">
+            <h4 className="text-primary font-bold mb-6 text-sm md:text-base uppercase tracking-wider">
+              Navegación
+            </h4>
+            <ul className="flex flex-col gap-3.5">
               {navLinks.map((link: any, index: number) => (
                 <li key={index}>
                   <Link 
                     href={link.href}
-                    className="text-textSecondary hover:text-primary hover:translate-x-1 transition-all inline-block"
+                    className="text-textSecondary hover:text-primary transition-all duration-300 inline-flex items-center group text-sm md:text-base hover:translate-x-1.5"
                   >
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent mr-2.5 opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 transition-all duration-300" />
                     {link.text}
                   </Link>
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
-          {/* Column 3: Contact */}
-          <div>
-            <h4 className="text-primary font-bold mb-6 text-lg">Contacto</h4>
-            <ul className="flex flex-col gap-5">
-              <li className="flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-primary/5 flex items-center justify-center text-primary shrink-0">
-                  <Phone className="w-5 h-5" />
+          {/* Column 3: Contact (3 cols) */}
+          <motion.div variants={itemVariants} className="lg:col-span-3">
+            <h4 className="text-primary font-bold mb-6 text-sm md:text-base uppercase tracking-wider">
+              Contacto
+            </h4>
+            <ul className="flex flex-col gap-4">
+              <li className="flex gap-3.5 group">
+                <div className="w-10 h-10 rounded-2xl bg-primary/5 flex items-center justify-center text-primary shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <Phone className="w-4.5 h-4.5" />
                 </div>
-                <div>
-                  <span className="block text-xs text-textSecondary uppercase font-bold tracking-wider mb-1">Llámanos</span>
-                  <a href={`tel:${siteConfig.contact.whatsapp.number}`} className="text-textPrimary font-semibold hover:text-primary transition-colors">
+                <div className="flex flex-col">
+                  <span className="text-[11px] text-textSecondary uppercase font-bold tracking-wider mb-0.5">Llámanos</span>
+                  <a href={`tel:${siteConfig.contact.whatsapp.number}`} className="text-textPrimary font-semibold text-sm md:text-base hover:text-primary transition-colors">
                     +{siteConfig.contact.whatsapp.number}
                   </a>
                 </div>
               </li>
-              <li className="flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-primary/5 flex items-center justify-center text-primary shrink-0">
-                  <Mail className="w-5 h-5" />
+              <li className="flex gap-3.5 group">
+                <div className="w-10 h-10 rounded-2xl bg-primary/5 flex items-center justify-center text-primary shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <Mail className="w-4.5 h-4.5" />
                 </div>
-                <div>
-                  <span className="block text-xs text-textSecondary uppercase font-bold tracking-wider mb-1">Email</span>
-                  <a href={`mailto:${siteConfig.contact.email}`} className="text-textPrimary font-semibold hover:text-primary transition-colors break-all">
+                <div className="flex flex-col min-w-0">
+                  <span className="text-[11px] text-textSecondary uppercase font-bold tracking-wider mb-0.5">Email</span>
+                  <a href={`mailto:${siteConfig.contact.email}`} className="text-textPrimary font-semibold text-sm md:text-base hover:text-primary transition-colors break-all pr-2">
                     {siteConfig.contact.email}
                   </a>
                 </div>
               </li>
             </ul>
-          </div>
+          </motion.div>
 
-          {/* Column 4: Location */}
-          <div>
-            <h4 className="text-primary font-bold mb-6 text-lg">Ubicación</h4>
+          {/* Column 4: Location (3 cols) */}
+          <motion.div variants={itemVariants} className="lg:col-span-3">
+            <h4 className="text-primary font-bold mb-6 text-sm md:text-base uppercase tracking-wider">
+              Ubicación
+            </h4>
             <div className="flex flex-col gap-4">
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-primary/5 flex items-center justify-center text-primary shrink-0">
-                  <MapPin className="w-5 h-5" />
+              <div className="flex gap-3.5 group">
+                <div className="w-10 h-10 rounded-2xl bg-primary/5 flex items-center justify-center text-primary shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <MapPin className="w-4.5 h-4.5" />
                 </div>
-                <p className="text-textPrimary font-medium">
-                  Sargento Candelaria 346,<br />Chonchi, Chiloé.
+                <p className="text-textPrimary font-semibold text-sm md:text-base leading-snug">
+                  Sargento Candelaria 346,<br />
+                  Chonchi, Chiloé.
                 </p>
               </div>
               <Link 
                 href="https://maps.google.com/?q=Sargento+Candelaria+346+Chonchi" 
                 target="_blank"
-                className="mt-2 inline-flex items-center gap-2 text-primary font-bold text-sm hover:underline"
+                className="inline-flex items-center gap-1.5 text-accent font-bold text-xs uppercase tracking-wider hover:text-primary transition-colors mt-2 self-start group"
               >
                 Ver en Google Maps
-                <ExternalLink className="w-4 h-4" />
+                <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
               </Link>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        {/* Copyright */}
-        <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-textSecondary text-sm text-center md:text-left">
+        {/* Copyright & Legal links */}
+        <div className="pt-8 border-t border-gray-200/60 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-textSecondary text-xs md:text-sm text-center md:text-left">
             © {new Date().getFullYear()} <span className="font-bold text-primary">{siteConfig.brand.name}</span>. Todos los derechos reservados.
           </p>
-          <div className="flex items-center gap-6 text-sm">
-            <Link href="#" className="text-textSecondary hover:text-primary transition-colors">Términos</Link>
-            <Link href="#" className="text-textSecondary hover:text-primary transition-colors">Privacidad</Link>
-            <div className="flex items-center gap-2 text-textSecondary">
-              <span>Hecho con</span>
-              <span className="text-accent animate-pulse">❤️</span>
-              <span>en Chonchi</span>
-            </div>
+          <div className="flex items-center gap-6 text-xs md:text-sm font-medium">
+            <Link href="#" className="text-textSecondary hover:text-primary transition-colors">Términos de Uso</Link>
+            <Link href="#" className="text-textSecondary hover:text-primary transition-colors">Políticas de Privacidad</Link>
           </div>
         </div>
       </div>

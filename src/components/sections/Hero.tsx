@@ -21,8 +21,9 @@ export function Hero() {
       className="relative min-h-[70vh] flex items-center pt-20 pb-10 overflow-hidden bg-bgSecondary"
     >
       {/* Decorative Background Elements */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-      <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary opacity-20 blur-[100px]"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-bgSecondary via-white to-bgSecondary"></div>
+      <div className="absolute left-[-10%] top-[-20%] w-[500px] h-[500px] rounded-full bg-primary/10 blur-[150px] pointer-events-none"></div>
+      <div className="absolute right-[-5%] bottom-[-10%] w-[400px] h-[400px] rounded-full bg-primary/5 blur-[120px] pointer-events-none"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10 max-w-[1150px]">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
@@ -39,9 +40,9 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="inline-flex items-center self-center lg:self-start rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-medium text-primary shadow-sm"
+                className="inline-flex items-center self-center lg:self-start rounded-full border border-white/30 bg-white/40 backdrop-blur-md px-3 py-1 text-sm font-medium text-primary shadow-sm"
               >
-                <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
+                <span className="flex h-2 w-2 rounded-full bg-accent mr-2 animate-pulse animate-duration-1000"></span>
                 {config.badge}
               </motion.div>
             )}
@@ -52,7 +53,13 @@ export function Hero() {
               transition={{ delay: 0.3 }}
               className="text-hero font-bold tracking-tight text-textPrimary leading-[1.1]"
             >
-              {config.headline}
+              {config.headline?.includes("integral") ? (
+                <>
+                  {config.headline.split("integral")[0]}
+                  <span className="text-accent">integral</span>
+                  {config.headline.split("integral")[1]}
+                </>
+              ) : config.headline}
             </motion.h1>
 
             <motion.p 
@@ -82,7 +89,7 @@ export function Hero() {
                         buttonVariants({ variant: cta.variant === "primary" ? "default" : "outline", size: "lg" }),
                         "rounded-full shadow-lg h-14 px-8 text-base font-semibold transition-all duration-300",
                         cta.variant === "primary" 
-                          ? "bg-primary hover:bg-primaryDark text-white hover:shadow-xl hover:-translate-y-1" 
+                          ? "bg-primary hover:bg-primaryDark text-white hover:shadow-xl hover:-translate-y-1 animate-[pulse_3s_ease-in-out_infinite]" 
                           : "border-2 border-primary/20 hover:border-primary hover:bg-primary/5 text-primary"
                       )}
                     >
@@ -101,11 +108,9 @@ export function Hero() {
                 initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }}
                 animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative mx-auto w-full max-w-[500px] lg:max-w-none aspect-[4/3] lg:aspect-[3/4] xl:aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl border border-white/20"
+                className="relative mx-auto w-full max-w-[500px] lg:max-w-none aspect-[4/3] lg:aspect-[3/4] xl:aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl shadow-primary/20 ring-1 ring-white/30"
               >
-                {config.media.type === "image" && (
-                  <div className="absolute inset-0 bg-primary/10 mix-blend-multiply z-10 rounded-[2rem]"></div>
-                )}
+
                 {config.media.type === "image" ? (
                   <Image
                     src={config.media.src || "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop"}
