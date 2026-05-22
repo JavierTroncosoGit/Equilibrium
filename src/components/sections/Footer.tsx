@@ -185,9 +185,15 @@ export function Footer() {
                 <span>Sargento Candelaria 346, Chonchi, Chiloé.</span>
               </div>
               <div className="flex items-center gap-3">
+                <MessageCircle className="w-4 h-4 text-primary shrink-0" />
+                <a href={resolveHref("#whatsapp").url} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors font-medium">
+                  WhatsApp: +56 9 3584 8200
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary shrink-0" />
-                <a href={`tel:${siteConfig.contact.whatsapp.number}`} className="hover:text-primary transition-colors font-medium">
-                  +{siteConfig.contact.whatsapp.number}
+                <a href={`tel:${siteConfig.contact.landline.replace(/\D/g, "")}`} className="hover:text-primary transition-colors font-medium">
+                  Teléfono Fijo: {siteConfig.contact.landline}
                 </a>
               </div>
               <div className="flex items-center gap-3">
@@ -266,9 +272,16 @@ export function Footer() {
           <p className="text-textSecondary text-xs md:text-sm text-center md:text-left">
             © {new Date().getFullYear()} <span className="font-bold text-primary">{siteConfig.brand.name}</span>. Todos los derechos reservados.
           </p>
-          <div className="flex items-center gap-6 text-xs md:text-sm font-medium">
-            <Link href="#" className="text-textSecondary hover:text-primary transition-colors">Términos de Uso</Link>
-            <Link href="#" className="text-textSecondary hover:text-primary transition-colors">Políticas de Privacidad</Link>
+          <div className="text-xs md:text-sm text-textSecondary font-medium">
+            <span>Hecho por </span>
+            <a 
+              href="https://www.darw.cl/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-primary hover:text-accent font-bold transition-colors"
+            >
+              Darw
+            </a>
           </div>
         </div>
       </div>
