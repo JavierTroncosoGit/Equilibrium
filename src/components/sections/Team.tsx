@@ -40,23 +40,26 @@ export function Team() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0); // -1 for left, 1 for right
+  const [imageError, setImageError] = useState(false);
 
   if (members.length === 0) return null;
 
   const handlePrev = () => {
     setDirection(-1);
+    setImageError(false);
     setCurrentIndex((prev) => (prev === 0 ? members.length - 1 : prev - 1));
   };
 
   const handleNext = () => {
     setDirection(1);
+    setImageError(false);
     setCurrentIndex((prev) => (prev === members.length - 1 ? 0 : prev + 1));
   };
 
   const currentMember = members[currentIndex];
   const initials = getInitials(currentMember.name);
   const fallbackBg = stringToColor(currentMember.role + currentIndex);
-  
+
   // Checks if we should try to render the actual image file
   const hasRealImage =
     currentMember.image &&
@@ -90,7 +93,7 @@ export function Team() {
   return (
     <section id={config.id} className="py-16 lg:py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 max-w-[1150px]">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           {config.sectionLabel && (
@@ -126,7 +129,7 @@ export function Team() {
         {/* Custom Specialist Showcase Slider Card */}
         <div className="relative max-w-4xl mx-auto mt-8">
           <div className="bg-[#f8fafc] rounded-[2.5rem] border border-gray-100 shadow-xl shadow-primary/5 p-6 md:p-10 lg:p-12 min-h-[420px] flex flex-col justify-between relative">
-            
+
             {/* Animating Card Content Area */}
             <div className="relative overflow-hidden w-full h-full flex-grow">
               <AnimatePresence mode="wait" initial={false} custom={direction}>
@@ -139,11 +142,11 @@ export function Team() {
                   exit="exit"
                   className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center"
                 >
-                  
+
                   {/* Left Column: Avatar and Name */}
                   <div className="md:col-span-4 flex flex-col items-center md:items-start text-center md:text-left">
                     <div className="relative w-36 h-44 md:w-full md:aspect-[3/4] rounded-3xl overflow-hidden shadow-md bg-white border border-gray-100/50 shrink-0">
-                      {hasRealImage ? (
+                      {hasRealImage && !imageError ? (
                         <Image
                           src={currentMember.image}
                           alt={currentMember.name}
@@ -151,6 +154,7 @@ export function Team() {
                           sizes="(max-width: 768px) 150px, 300px"
                           className="object-cover"
                           priority
+                          onError={() => setImageError(true)}
                         />
                       ) : (
                         <div
@@ -162,7 +166,7 @@ export function Team() {
                           </span>
                         </div>
                       )}
-                      
+
                       {/* Gentle shadow overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent pointer-events-none" />
                     </div>

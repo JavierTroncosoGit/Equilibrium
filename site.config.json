@@ -43,7 +43,7 @@
       "label": "Agendar por WhatsApp"
     },
     "landline": "(65) 2671625",
-    "email": "contacto@equilibriumchonchi.cl"
+    "email": "recepcionequilibriumchonchi@gmail.com"
   },
   "animations": {
     "level": 2
@@ -163,8 +163,8 @@
       "subheadline": "Un espacio donde nuestros especialistas comparten conocimiento y experiencia sobre salud, bienestar y prevención.",
       "members": [
         {
-          "name": "Dr. Alexis Salazar Russian",
-          "role": "Médico",
+          "name": "Dra. Alexis Salazar Russian",
+          "role": "Médico General",
           "category": "Salud Preventiva",
           "date": "22 May 2026",
           "quoteTitle": "La prevención activa: el pilar fundamental de una vida saludable",
@@ -178,7 +178,7 @@
           "date": "18 May 2026",
           "quoteTitle": "El movimiento es vida: recuperar la movilidad sin dolor",
           "description": "Cada paciente tiene una historia de movimiento única. La rehabilitación exitosa combina terapia manual avanzada, ejercicios personalizados y, sobre todo, la educación del paciente para prevenir futuras lesiones y devolverles la confianza en su propio cuerpo para retomar sus actividades diarias sin dolor.",
-          "image": "/images/team/kinesiologo.jpg"
+          "image": "/images/team/kinesiologo.png"
         },
         {
           "name": "Diego Urrutia Marchant",
@@ -205,7 +205,106 @@
           "date": "05 May 2026",
           "quoteTitle": "Cuidar tus ojos hoy para ver un mejor mañana",
           "description": "La visión es el sentido con el que más interactuamos con el mundo. Un examen visual completo a tiempo puede detectar no solo problemas refractivos como miopía o astigmatismo, sino también patologías silenciosas. La detección temprana es clave para proteger y salvar tu visión.",
-          "image": "/images/team/tecnologo-oftalmo.jpg"
+          "image": "/images/team/tecnologo-oftalmo.png"
+        },
+        {
+          "name": "Constanza Berrios Guzmán",
+          "role": "Psicóloga",
+          "category": "Salud Mental & Bienestar",
+          "date": "02 May 2026",
+          "quoteTitle": "Comprender nuestras emociones es el primer paso para transformarlas",
+          "description": "El autoconocimiento emocional nos permite enfrentar los desafíos del día a día con mayor claridad y fortaleza. En terapia, trabajamos juntos para identificar patrones, desarrollar estrategias de afrontamiento y construir un bienestar emocional duradero que impacte positivamente en todas las áreas de la vida.",
+          "image": "/images/team/constanza-berrios.png"
+        },
+        {
+          "name": "Diana Ojeda Cárdenas",
+          "role": "Psicóloga",
+          "category": "Salud Mental & Bienestar",
+          "date": "28 Abr 2026",
+          "quoteTitle": "La salud mental es un derecho, no un privilegio",
+          "description": "Cada persona merece acceso a un espacio terapéutico donde pueda ser escuchada sin juicios. Mi enfoque se centra en acompañar procesos de sanación emocional, brindando herramientas concretas para manejar la ansiedad, el estrés y las dificultades relacionales que afectan nuestra vida cotidiana.",
+          "image": "/images/team/diana-ojeda.jpg"
+        },
+        {
+          "name": "Elba Nain Nain",
+          "role": "Fonoaudióloga",
+          "category": "Fonoaudiología & Comunicación",
+          "date": "25 Abr 2026",
+          "quoteTitle": "La voz y el lenguaje nos conectan con quienes amamos",
+          "description": "Cada palabra que recuperamos, cada sonido que logramos articular con claridad, abre una nueva puerta de conexión con el mundo. La fonoaudiología va más allá de la rehabilitación del habla; se trata de devolver la confianza comunicativa y fortalecer los vínculos afectivos a través del lenguaje.",
+          "image": "/images/team/elba-nain.jpg"
+        },
+        {
+          "name": "Gonzalo Acevedo Carcamo",
+          "role": "Médico General",
+          "category": "Salud Preventiva",
+          "date": "20 Abr 2026",
+          "quoteTitle": "La medicina cercana marca la diferencia en la salud comunitaria",
+          "description": "Atender de forma integral significa ver al paciente como un todo: su contexto, su historia y sus necesidades. La medicina general de calidad en la comunidad evita traslados innecesarios y garantiza un seguimiento continuo que permite detectar y prevenir enfermedades a tiempo.",
+          "image": "/images/team/gonzalo-acevedo.png"
+        },
+        {
+          "name": "Jaime Yamal Barrios",
+          "role": "Médico General",
+          "category": "Salud Preventiva",
+          "date": "15 Abr 2026",
+          "quoteTitle": "Prevenir es cuidar: cada control médico cuenta",
+          "description": "Los chequeos médicos regulares son la herramienta más poderosa que tenemos para proteger nuestra salud. Un diagnóstico oportuno puede cambiar completamente el curso de una enfermedad. Mi compromiso es ofrecer una atención empática y rigurosa que priorice siempre el bienestar del paciente.",
+          "image": "/images/team/jaime-yamal.jpg"
+        },
+        {
+          "name": "Juan Luis Alvarez Saldivia",
+          "role": "Kinesiólogo",
+          "category": "Kinesiología & Rehabilitación",
+          "date": "10 Abr 2026",
+          "quoteTitle": "Rehabilitar es devolver la libertad de movimiento",
+          "description": "La kinesiología busca restablecer la funcionalidad del cuerpo a través de técnicas especializadas y un plan de tratamiento personalizado. Cada sesión es una oportunidad para avanzar hacia la recuperación, reducir el dolor y recuperar la autonomía en las actividades que más importan.",
+          "image": "/images/team/juan-alvarez.jpg"
+        },
+        {
+          "name": "Karen Cárdenas Soto",
+          "role": "Tecnóloga Médica en ORL",
+          "category": "Salud Auditiva",
+          "date": "05 Abr 2026",
+          "quoteTitle": "Escuchar bien es vivir plenamente",
+          "description": "La salud auditiva es fundamental para nuestra calidad de vida y comunicación. A través de estudios audiológicos precisos, podemos detectar a tiempo alteraciones que, de no ser tratadas, pueden afectar el desarrollo del lenguaje en niños y el bienestar social en adultos. La prevención auditiva salva capacidades.",
+          "image": "/images/team/karen-cardenas.jpg"
+        },
+        {
+          "name": "Maria Caterino Gomez",
+          "role": "Médico General (Telemedicina)",
+          "category": "Telemedicina & Salud Digital",
+          "date": "01 Abr 2026",
+          "quoteTitle": "La telemedicina acerca la salud a donde más se necesita",
+          "description": "La tecnología nos permite llevar atención médica de calidad a comunidades donde el acceso presencial es limitado. La telemedicina no reemplaza el contacto humano, lo complementa, garantizando que ningún paciente quede sin atención por barreras geográficas o de movilidad.",
+          "image": "/images/team/maria-caterino.jpg"
+        },
+        {
+          "name": "Natalia Barría Martinez",
+          "role": "TENS",
+          "category": "Apoyo Clínico & Asistencia",
+          "date": "28 Mar 2026",
+          "quoteTitle": "El cuidado profesional está en cada detalle de la atención",
+          "description": "Como técnico en enfermería, somos el puente entre el paciente y el equipo médico. Nuestra labor va desde la preparación de procedimientos hasta el acompañamiento emocional del paciente, asegurando que cada persona se sienta cuidada, segura y respaldada durante todo su proceso de atención.",
+          "image": "/images/team/natalia-barria.png"
+        },
+        {
+          "name": "Victor Sanchez Carrasco",
+          "role": "Podólogo y TENS",
+          "category": "Podología Clínica",
+          "date": "25 Mar 2026",
+          "quoteTitle": "Cuidar los pies es cuidar la base de nuestra movilidad",
+          "description": "Los pies son el soporte de todo nuestro cuerpo y su salud impacta directamente en nuestra calidad de vida. La podología clínica permite prevenir y tratar patologías que, si se descuidan, pueden generar complicaciones mayores, especialmente en pacientes con enfermedades crónicas como la diabetes.",
+          "image": "/images/team/victor-sanchez.jpg"
+        },
+        {
+          "name": "Yesenia Mansilla Borquez",
+          "role": "Nutricionista",
+          "category": "Nutrición & Alimentación",
+          "date": "20 Mar 2026",
+          "quoteTitle": "Una buena alimentación es el mejor acto de amor propio",
+          "description": "La nutrición es mucho más que contar calorías; es entender la relación entre lo que comemos y cómo nos sentimos. Un plan alimentario personalizado, adaptado a la realidad y gustos de cada paciente, es la clave para alcanzar un peso saludable, prevenir enfermedades y mejorar la energía y vitalidad diaria.",
+          "image": "/images/team/yesenia-mansilla.png"
         }
       ]
     },

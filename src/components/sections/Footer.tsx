@@ -204,7 +204,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Clock className="w-4 h-4 text-primary shrink-0" />
-                <span>Lun - Vie: 09:00 - 18:00 | Sáb: 09:00 - 13:00</span>
+                <span>Lun - Vie: 08:30 - 21:00 | Sáb: 10:00 - 14:00</span>
               </div>
             </div>
 
@@ -274,10 +274,10 @@ export function Footer() {
           </p>
           <div className="text-xs md:text-sm text-textSecondary font-medium">
             <span>Hecho por </span>
-            <a 
-              href="https://www.darw.cl/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://www.darw.cl/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-primary hover:text-accent font-bold transition-colors"
             >
               Darw
