@@ -5,6 +5,7 @@ import { ServicesBanner } from "@/components/sections/ServicesBanner";
 import { Team } from "@/components/sections/Team";
 import { ReservaSection } from "@/components/sections/ReservaSection";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { Alianzas } from "@/components/sections/Alianzas";
 import { FAQ } from "@/components/sections/FAQ";
 import { Footer } from "@/components/sections/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
@@ -27,6 +28,8 @@ export default function Home() {
         return <ReservaSection key={section.id} />;
       case "testimonials":
         return <Testimonials key={section.id} />;
+      case "alianzas":
+        return <Alianzas key={section.id} />;
       case "faq":
         return <FAQ key={section.id} />;
       case "footer":

@@ -66,6 +66,10 @@
           "href": "#reserva"
         },
         {
+          "text": "Alianzas",
+          "href": "#alianzas"
+        },
+        {
           "text": "FAQ",
           "href": "#faq"
         }
@@ -169,7 +173,7 @@
           "date": "22 May 2026",
           "quoteTitle": "La prevención activa: el pilar fundamental de una vida saludable",
           "description": "La medicina general no se trata solo de tratar la enfermedad cuando aparece, sino de construir hábitos y controles preventivos que eviten su desarrollo. Escuchar al paciente de forma activa y empática es el primer paso para un diagnóstico correcto y un tratamiento eficaz que mejore su calidad de vida a largo plazo.",
-          "image": "/images/team/medico-general.jpg"
+          "image": "/images/Dra-salazar-medicina-general.png"
         },
         {
           "name": "Elias Vergara Opazo",
@@ -223,7 +227,7 @@
           "date": "28 Abr 2026",
           "quoteTitle": "La salud mental es un derecho, no un privilegio",
           "description": "Cada persona merece acceso a un espacio terapéutico donde pueda ser escuchada sin juicios. Mi enfoque se centra en acompañar procesos de sanación emocional, brindando herramientas concretas para manejar la ansiedad, el estrés y las dificultades relacionales que afectan nuestra vida cotidiana.",
-          "image": "/images/team/diana-ojeda.jpg"
+          "image": "/images/Diana-Ojeda-Psicologa.png"
         },
         {
           "name": "Elba Nain Nain",
@@ -232,7 +236,7 @@
           "date": "25 Abr 2026",
           "quoteTitle": "La voz y el lenguaje nos conectan con quienes amamos",
           "description": "Cada palabra que recuperamos, cada sonido que logramos articular con claridad, abre una nueva puerta de conexión con el mundo. La fonoaudiología va más allá de la rehabilitación del habla; se trata de devolver la confianza comunicativa y fortalecer los vínculos afectivos a través del lenguaje.",
-          "image": "/images/team/elba-nain.jpg"
+          "image": "/images/Elba-Nain-Fonoaudiologa.png"
         },
         {
           "name": "Gonzalo Acevedo Carcamo",
@@ -268,7 +272,7 @@
           "date": "05 Abr 2026",
           "quoteTitle": "Escuchar bien es vivir plenamente",
           "description": "La salud auditiva es fundamental para nuestra calidad de vida y comunicación. A través de estudios audiológicos precisos, podemos detectar a tiempo alteraciones que, de no ser tratadas, pueden afectar el desarrollo del lenguaje en niños y el bienestar social en adultos. La prevención auditiva salva capacidades.",
-          "image": "/images/team/karen-cardenas.jpg"
+          "image": "/images/Karen-cardenas-tecnologa-medica-orl.png"
         },
         {
           "name": "Maria Caterino Gomez",
@@ -277,7 +281,7 @@
           "date": "01 Abr 2026",
           "quoteTitle": "La telemedicina acerca la salud a donde más se necesita",
           "description": "La tecnología nos permite llevar atención médica de calidad a comunidades donde el acceso presencial es limitado. La telemedicina no reemplaza el contacto humano, lo complementa, garantizando que ningún paciente quede sin atención por barreras geográficas o de movilidad.",
-          "image": "/images/team/maria-caterino.jpg"
+          "image": "/images/Maria-Caterino-Telemedicina.png"
         },
         {
           "name": "Natalia Barría Martinez",
@@ -295,7 +299,7 @@
           "date": "25 Mar 2026",
           "quoteTitle": "Cuidar los pies es cuidar la base de nuestra movilidad",
           "description": "Los pies son el soporte de todo nuestro cuerpo y su salud impacta directamente en nuestra calidad de vida. La podología clínica permite prevenir y tratar patologías que, si se descuidan, pueden generar complicaciones mayores, especialmente en pacientes con enfermedades crónicas como la diabetes.",
-          "image": "/images/team/victor-sanchez.jpg"
+          "image": "/images/Victor-Sanchez-Podologo.png"
         },
         {
           "name": "Yesenia Mansilla Borquez",
@@ -305,6 +309,15 @@
           "quoteTitle": "Una buena alimentación es el mejor acto de amor propio",
           "description": "La nutrición es mucho más que contar calorías; es entender la relación entre lo que comemos y cómo nos sentimos. Un plan alimentario personalizado, adaptado a la realidad y gustos de cada paciente, es la clave para alcanzar un peso saludable, prevenir enfermedades y mejorar la energía y vitalidad diaria.",
           "image": "/images/team/yesenia-mansilla.png"
+        },
+        {
+          "name": "Cecilia Ojeda",
+          "role": "Nutricionista",
+          "category": "Nutrición & Alimentación",
+          "date": "18 Mar 2026",
+          "quoteTitle": "Alimentación consciente para una salud plena",
+          "description": "La alimentación es el pilar fundamental del bienestar. Mi enfoque es guiar a cada persona en la adopción de hábitos saludables y equilibrados que se adapten a su ritmo de vida, potenciando su energía, previniendo patologías y mejorando su calidad de vida de forma integral.",
+          "image": "/images/Cecilia-Ojeda-Nutricionista.png"
         }
       ]
     },
@@ -374,6 +387,53 @@
           "role": "Paciente Regular",
           "avatar": "/images/avatar3.jpg",
           "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "alianzas",
+      "type": "alianzas",
+      "sectionLabel": "Alianzas Estratégicas",
+      "headline": "Nuestras Alianzas Estratégicas",
+      "subheadline": "Trabajamos junto a prestigiosos centros e instituciones de salud para ofrecerte una atención integral y de calidad sin salir de Chonchi.",
+      "partners": [
+        {
+          "name": "Óptica Clara Visión Sur",
+          "logo": "/assets/logo-optica.png",
+          "description": "Tu óptica vecina en Chonchi. Te brindamos exámenes visuales con tecnología avanzada y soluciones ópticas sin salir del pueblo.",
+          "services": [
+            "Evaluación Optométrica Completa",
+            "Retinografía Digital",
+            "Test de Schirmer",
+            "Test de Ishihara",
+            "Certificados Técnicos Oficiales",
+            "Armazones y Cristales"
+          ],
+          "whatsapp": {
+            "number": "56936704932",
+            "message": "Hola, me gustaría consultar por una atención o lentes en Óptica Clara Visión Sur."
+          },
+          "instagram": "https://www.instagram.com/claravisionsur",
+          "website": ""
+        },
+        {
+          "name": "Laboratorio El Bosque",
+          "logo": "/assets/logo-laboratorio.png",
+          "description": "Laboratorio clínico especializado. Procesamos tus exámenes con la máxima precisión, rapidez y tecnología de vanguardia para tu diagnóstico.",
+          "services": [
+            "Exámenes Bioquímicos",
+            "Exámenes Hematológicos",
+            "Exámenes Hormonales",
+            "Exámenes Inmunológicos",
+            "Marcadores Tumorales",
+            "Exámenes Microbiológicos"
+          ],
+          "whatsapp": {
+            "number": "56964126777",
+            "message": "Hola, me gustaría realizarme o consultar por exámenes en Laboratorio El Bosque."
+          },
+          "instagram": "https://www.instagram.com/laboratorioclinicoelbosque/?hl=es",
+          "website": ""
         }
       ]
     },
