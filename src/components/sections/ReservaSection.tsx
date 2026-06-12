@@ -11,8 +11,6 @@ import { resolveHref } from "@/lib/whatsapp";
 export function ReservaSection() {
   const config = siteConfig.sections.find((s) => s.type === "reserva-unified") as any;
   if (!config) return null;
-
-  const steps = config.steps || [];
   const trustBadges = config.trustBadges || [];
   const whatsappResolved = resolveHref("#whatsapp");
 
@@ -59,44 +57,6 @@ export function ReservaSection() {
           >
             {config.headline}
           </motion.h2>
-        </div>
-
-        {/* Steps Row */}
-        <div className="relative max-w-4xl mx-auto mb-12">
-          {/* Connector Line (visible on md+) */}
-          <div className="hidden md:block absolute top-[2.5rem] left-[15%] right-[15%] h-0.5 bg-white/10 rounded-full">
-            <motion.div
-              initial={{ width: "0%" }}
-              whileInView={{ width: "100%" }}
-              transition={{ duration: 1.5, ease: "easeOut", delay: 0.3 }}
-              viewport={{ once: true }}
-              className="h-full bg-gradient-to-r from-white/40 via-white/60 to-white/40 rounded-full"
-            />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 relative z-10">
-            {steps.map((step: any, index: number) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.15 }}
-                viewport={{ once: true }}
-                className="flex flex-col items-center text-center"
-              >
-                {/* Step Number Circle */}
-                <div className="w-20 h-20 bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-full flex items-center justify-center shadow-lg mb-5 hover:bg-white/20 hover:border-white/40 transition-all duration-300 group">
-                  <span className="text-2xl font-black text-white/70 group-hover:text-white transition-colors">
-                    {step.number}
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                <p className="text-blue-100/70 leading-relaxed text-sm max-w-[250px]">
-                  {step.body}
-                </p>
-              </motion.div>
-            ))}
-          </div>
         </div>
 
         {/* Iframe Card */}

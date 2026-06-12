@@ -54,16 +54,12 @@
       "type": "navbar",
       "links": [
         {
-          "text": "Servicios",
-          "href": "#servicios"
+          "text": "Agenda Online",
+          "href": "#reserva"
         },
         {
           "text": "Equipo",
           "href": "#equipo"
-        },
-        {
-          "text": "Agenda Online",
-          "href": "#reserva"
         },
         {
           "text": "Alianzas",
@@ -156,6 +152,45 @@
         {
           "icon": "audio-lines",
           "title": "Audiometrías"
+        }
+      ]
+    },
+    {
+      "id": "reserva",
+      "type": "reserva-unified",
+      "sectionLabel": "Agenda Online",
+      "headline": "Agenda tu hora en simples pasos",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Elige tu especialidad",
+          "body": "Revisa nuestros servicios y encuentra al profesional indicado."
+        },
+        {
+          "number": "02",
+          "title": "Reserva tu hora",
+          "body": "Selecciona fecha y horario directamente en nuestra agenda online."
+        },
+        {
+          "number": "03",
+          "title": "Asiste a tu cita",
+          "body": "Te esperamos en Sargento Candelaria 346, Chonchi."
+        }
+      ],
+      "iframeSrc": "https://agendamiento.reservo.cl/makereserva/agenda/i0Kaf99050hiEB1T0624wQP869h6w9",
+      "iframeHeight": 650,
+      "trustBadges": [
+        {
+          "icon": "clock",
+          "text": "Confirmación inmediata"
+        },
+        {
+          "icon": "shield-check",
+          "text": "Reserva 100% segura"
+        },
+        {
+          "icon": "check-circle-2",
+          "text": "Especialistas certificados"
         }
       ]
     },
@@ -271,7 +306,7 @@
           "category": "Salud Auditiva",
           "date": "05 Abr 2026",
           "quoteTitle": "Escuchar bien es vivir plenamente",
-          "description": "La salud auditiva es fundamental para nuestra calidad de vida y comunicación. A través de estudios audiológicos precisos, podemos detectar a tiempo alteraciones que, de no ser tratadas, pueden afectar el desarrollo del lenguaje en niños y el bienestar social en adultos. La prevención auditiva salva capacidades.",
+          "description": "La salud auditiva es fundamental para nuestra calidad de vida and comunicación. A través de estudios audiológicos precisos, podemos detectar a tiempo alteraciones que, de no ser tratadas, pueden afectar el desarrollo del lenguaje en niños y el bienestar social en adultos. La prevención auditiva salva capacidades.",
           "image": "/images/Karen-cardenas-tecnologa-medica-orl.png"
         },
         {
@@ -318,45 +353,6 @@
           "quoteTitle": "Alimentación consciente para una salud plena",
           "description": "La alimentación es el pilar fundamental del bienestar. Mi enfoque es guiar a cada persona en la adopción de hábitos saludables y equilibrados que se adapten a su ritmo de vida, potenciando su energía, previniendo patologías y mejorando su calidad de vida de forma integral.",
           "image": "/images/Cecilia-Ojeda-Nutricionista.png"
-        }
-      ]
-    },
-    {
-      "id": "reserva",
-      "type": "reserva-unified",
-      "sectionLabel": "Agenda Online",
-      "headline": "Agenda tu hora en simples pasos",
-      "steps": [
-        {
-          "number": "01",
-          "title": "Elige tu especialidad",
-          "body": "Revisa nuestros servicios y encuentra al profesional indicado."
-        },
-        {
-          "number": "02",
-          "title": "Reserva tu hora",
-          "body": "Selecciona fecha y horario directamente en nuestra agenda online."
-        },
-        {
-          "number": "03",
-          "title": "Asiste a tu cita",
-          "body": "Te esperamos en Sargento Candelaria 346, Chonchi."
-        }
-      ],
-      "iframeSrc": "https://agendamiento.reservo.cl/makereserva/agenda/i0Kaf99050hiEB1T0624wQP869h6w9",
-      "iframeHeight": 650,
-      "trustBadges": [
-        {
-          "icon": "clock",
-          "text": "Confirmación inmediata"
-        },
-        {
-          "icon": "shield-check",
-          "text": "Reserva 100% segura"
-        },
-        {
-          "icon": "check-circle-2",
-          "text": "Especialistas certificados"
         }
       ]
     },

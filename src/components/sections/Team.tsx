@@ -69,23 +69,23 @@ export function Team() {
   // Sliding animation variants for smooth transition
   const slideVariants: Variants = {
     enter: (dir: number) => ({
-      x: dir > 0 ? 100 : -100,
+      x: dir > 0 ? 40 : -40,
       opacity: 0
     }),
     center: {
       x: 0,
       opacity: 1,
       transition: {
-        x: { type: "spring", stiffness: 300, damping: 30 },
-        opacity: { duration: 0.2 }
+        x: { type: "spring", stiffness: 600, damping: 38 },
+        opacity: { duration: 0.12 }
       }
     },
     exit: (dir: number) => ({
-      x: dir > 0 ? -100 : 100,
+      x: dir > 0 ? -40 : 40,
       opacity: 0,
       transition: {
-        x: { type: "spring", stiffness: 300, damping: 30 },
-        opacity: { duration: 0.2 }
+        x: { type: "spring", stiffness: 600, damping: 38 },
+        opacity: { duration: 0.12 }
       }
     })
   };
@@ -140,7 +140,18 @@ export function Team() {
                   initial="enter"
                   animate="center"
                   exit="exit"
-                  className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center"
+                  drag="x"
+                  dragConstraints={{ left: 0, right: 0 }}
+                  dragElastic={0.7}
+                  onDragEnd={(event, info) => {
+                    const swipeThreshold = 50;
+                    if (info.offset.x < -swipeThreshold) {
+                      handleNext();
+                    } else if (info.offset.x > swipeThreshold) {
+                      handlePrev();
+                    }
+                  }}
+                  className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center cursor-grab active:cursor-grabbing select-none touch-pan-y"
                 >
 
                   {/* Left Column: Avatar and Name */}
